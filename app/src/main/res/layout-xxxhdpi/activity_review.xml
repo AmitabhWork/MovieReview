@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:id="@+id/ll2"
-    tools:context="com.example.sadanandk.moviereviews.ReviewActivity">
+    tools:context=".ReviewActivity">
 
 
     <ImageView

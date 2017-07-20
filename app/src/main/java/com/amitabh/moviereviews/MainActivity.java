@@ -1,4 +1,4 @@
-package com.example.sadanandk.moviereviews;
+package com.amitabh.moviereviews;
 
 import android.app.ProgressDialog;
 import android.content.Context;

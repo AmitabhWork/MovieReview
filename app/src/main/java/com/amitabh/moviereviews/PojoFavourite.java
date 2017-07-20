@@ -1,4 +1,4 @@
-package com.example.sadanandk.moviereviews;
+package com.amitabh.moviereviews;
 
 /**
  * Created by sadanandk on 7/12/2017.

@@ -1,4 +1,4 @@
-package com.example.sadanandk.moviereviews;
+package com.amitabh.moviereviews;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

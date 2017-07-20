@@ -1,5 +1,5 @@
 
-        package com.example.sadanandk.moviereviews;
+        package com.amitabh.moviereviews;
 
         import android.content.Context;
         import android.util.Log;

@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:id="@+id/ll1"
-    tools:context="com.example.sadanandk.moviereviews.DetailsActivity">
+    tools:context="com.amitabh.moviereviews.DetailsActivity">
 
 
     <ScrollView
@@ -83,6 +83,7 @@
                 android:id="@+id/btnFavorite"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:contentDescription="@string/favourite_icon"
                 android:src="@drawable/ic_favorite_black_48dp"
                 style="?borderlessButtonStyle"/>
 

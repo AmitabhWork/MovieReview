@@ -1,4 +1,4 @@
-package com.example.sadanandk.moviereviews;
+package com.amitabh.moviereviews;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
