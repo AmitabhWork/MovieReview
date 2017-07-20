@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
             }
+
             if (!savedInstanceState.getBoolean("flag")) {
                 if(internet)
                 {
