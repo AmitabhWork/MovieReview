@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/ll2"
+    tools:context="com.example.sadanandk.moviereviews.ReviewActivity">
+
+
+    <ImageView
+        android:contentDescription="@string/no_review_is_available"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/notavailable_en"
+        android:visibility="gone"
+        android:id="@+id/image_not"/>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lv_review"
+        android:divider="@android:color/holo_red_dark"
+        android:dividerHeight="2dp"/>
+</LinearLayout>
