@@ -50,6 +50,7 @@ public class DetailsActivity extends AppCompatActivity {
 
     private String movie_id;
     private ArrayList<PojoVideo> arrayListVideo;
+    int a;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
