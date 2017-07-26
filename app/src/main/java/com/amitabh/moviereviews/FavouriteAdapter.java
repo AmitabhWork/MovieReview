@@ -17,15 +17,15 @@ import java.util.ArrayList;
  * Created by sadanandk on 7/12/2017.
  */
 
-public class FavouriteAdapter  extends BaseAdapter
-{
+public class FavouriteAdapter extends BaseAdapter {
     private final Context context;
     private final ArrayList<PojoFavourite> pj;
-    FavouriteAdapter(Context context, ArrayList<PojoFavourite> pj)
-    {
+
+    FavouriteAdapter(Context context, ArrayList<PojoFavourite> pj) {
         this.context = context;
         this.pj = pj;
     }
+
     @Override
     public int getCount() {
         return pj.size();
@@ -44,28 +44,26 @@ public class FavouriteAdapter  extends BaseAdapter
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        View v=convertView;
+        View v = convertView;
         ViewHolder3 holder;
 
 
-        if(v==null) {
+        if (v == null) {
             LayoutInflater li = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             v = li.inflate(R.layout.favourite_list_item, parent, false);
 
-            holder=new ViewHolder3();
+            holder = new ViewHolder3();
             holder.iv = (ImageView) v.findViewById(R.id.i1);
             holder.tv = (TextView) v.findViewById(R.id.movie_tital);
 
 
-
-            Log.e("mahessh","ifnull");
+            Log.e("mahessh", "ifnull");
 
 
             v.setTag(holder);
-        }
-        else {
+        } else {
             holder = (ViewHolder3) v.getTag();
-            Log.e("mahessh","ifnotnull");
+            Log.e("mahessh", "ifnotnull");
         }
         Picasso.with(context).load("http://image.tmdb.org/t/p/w500/" + pj.get(position).getPoster()).into(holder.iv);
         holder.tv.setText(pj.get(position).getTitle());
@@ -74,8 +72,7 @@ public class FavouriteAdapter  extends BaseAdapter
     }
 }
 
-class ViewHolder3
-{
+class ViewHolder3 {
     ImageView iv;
     TextView tv;
 

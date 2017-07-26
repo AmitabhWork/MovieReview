@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.ButtonBarLayout;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -46,7 +47,7 @@ public class DetailsActivity extends AppCompatActivity {
 
     private ProgressDialog pd;
     private String json_string;
-    private ImageButton btnFavorite;
+
 
     private String movie_id;
     private ArrayList<PojoVideo> arrayListVideo;
@@ -79,7 +80,7 @@ public class DetailsActivity extends AppCompatActivity {
         overview.setText(b.getString("overview"));
         movie_id = b.getString("id");
 
-        btnFavorite = (ImageButton) findViewById(R.id.btnFavorite);
+        ImageButton btnFavorite = (ImageButton) findViewById(R.id.btnFavorite);
 
         btnFavorite.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,18 +95,18 @@ public class DetailsActivity extends AppCompatActivity {
                 Log.e("id",b.getString("overview"));
 */
                 MyDataBase md = new MyDataBase(DetailsActivity.this);
-                SQLiteDatabase db =md.getWritableDatabase();
+                SQLiteDatabase db = md.getWritableDatabase();
                 ContentValues cv = new ContentValues();
-                cv.put(MyDataBase.Movie_ID,movie_id);
-                cv.put(MyDataBase.Movie_NAME,b.getString("title"));
-                cv.put(MyDataBase.Movie_ReleaseDate,b.getString("releasedate"));
-                cv.put(MyDataBase.Movie_Overview,b.getString("overview"));
-                cv.put(MyDataBase.Movie_Poster,b.getString("image"));
-                cv.put(MyDataBase.Movie_Trailer,"null");
-                cv.put(MyDataBase.Movie_Rating,b.getString("rating"));
+                cv.put(MyDataBase.Movie_ID, movie_id);
+                cv.put(MyDataBase.Movie_NAME, b.getString("title"));
+                cv.put(MyDataBase.Movie_ReleaseDate, b.getString("releasedate"));
+                cv.put(MyDataBase.Movie_Overview, b.getString("overview"));
+                cv.put(MyDataBase.Movie_Poster, b.getString("image"));
+                cv.put(MyDataBase.Movie_Trailer, "null");
+                cv.put(MyDataBase.Movie_Rating, b.getString("rating"));
 
-               long l= db.insert(MyDataBase.TABLE_MovieDetails,null,cv);
-                Toast.makeText(DetailsActivity.this, ""+l, Toast.LENGTH_SHORT).show();
+                long l = db.insert(MyDataBase.TABLE_MovieDetails, null, cv);
+                Toast.makeText(DetailsActivity.this, "" + l, Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -219,6 +220,7 @@ public class DetailsActivity extends AppCompatActivity {
             }
         }
     }
+
     private boolean isOnline() {
         ConnectivityManager cm =
                 (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);

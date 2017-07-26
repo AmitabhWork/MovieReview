@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
     private final String popular = "popular";
     private final String top_rated ="top_rated";
-    int a;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

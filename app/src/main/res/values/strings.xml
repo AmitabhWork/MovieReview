@@ -4,6 +4,7 @@
     <string name="movie_image">movie image</string>
     <string name="rating">rating</string>
     <string name="favourite_icon">favourite icon</string>
+    <string name="favourite">Favourite</string>
     <string name="date">date</string>
     <string name="trailers">Trailers:</string>
     <string name="no_review_is_available">no review is available</string>

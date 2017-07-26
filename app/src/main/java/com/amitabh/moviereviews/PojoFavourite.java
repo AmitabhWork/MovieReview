@@ -6,7 +6,7 @@ package com.amitabh.moviereviews;
 
 public class PojoFavourite
 {
-    String m_id,title,r_date,overview,poster,trailer,rating;
+    private String m_id,title,r_date,overview,poster,trailer,rating;
 
     public PojoFavourite(String m_id, String title, String r_date, String overview, String poster, String trailer, String rating) {
         this.m_id = m_id;
