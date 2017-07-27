@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/ll1"
     android:layout_width="match_parent"
@@ -25,7 +26,6 @@
                 android:id="@+id/title_detail"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-
                 android:background="#64b389"
                 android:gravity="center"
                 android:textColor="#ffffff"
@@ -55,7 +55,6 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="end"
@@ -63,33 +62,22 @@
 
 
                     <TextView
-
                         android:id="@+id/rating"
                         android:layout_width="match_parent"
-
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/rating" />
+                        android:gravity="start"
+                        android:hint="@string/rating"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Display2" />
 
                     <TextView
                         android:id="@+id/releasedate"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-
-                        android:gravity="center"
-                        android:hint="@string/date" />
-
-                    <ImageButton
-                        android:id="@+id/btnFavorite"
-                        style="?borderlessButtonStyle"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:contentDescription="@string/favourite_icon"
-                        android:src="@drawable/ic_favorite_black_48dp" />
-
-
+                        android:gravity="start"
+                        android:hint="@string/date"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Display1" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -124,4 +112,5 @@
         android:id="@+id/lv"
         android:layout_width="match_parent"
         android:layout_height="250dp" />
+
 </LinearLayout>

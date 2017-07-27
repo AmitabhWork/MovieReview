@@ -5,9 +5,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-/**
- * Created by sadanandk on 6/27/2017.
- */
+
 
 class Result {
 
@@ -19,7 +17,7 @@ class Result {
     private Integer id;
     @SerializedName("video")
     @Expose
-    private Boolean video;
+    private boolean video;
     @SerializedName("vote_average")
     @Expose
     private Double voteAverage;
@@ -62,11 +60,11 @@ class Result {
         this.id = id;
     }
 
-    public Boolean getVideo() {
+    public boolean getVideo() {
         return video;
     }
 
-    public void setVideo(Boolean video) {
+    public void setVideo(boolean video) {
         this.video = video;
     }
 

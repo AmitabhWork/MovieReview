@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<PojoImage> arrayList;
 
     private final String popular = "popular";
-    private final String top_rated ="top_rated";
-    int a;
+    private final String top_rated = "top_rated";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,8 +48,8 @@ public class MainActivity extends AppCompatActivity {
             if (savedInstanceState.getBoolean("flag")) {
                 if (internet) {
                     g1.setSelection(count);
-                    sortMoview(top_rated);
-                }else {
+                    sortMovies(top_rated);
+                } else {
                     pd.dismiss();
                     Toast.makeText(this, "please check internet connection!!!!", Toast.LENGTH_SHORT).show();
                 }
@@ -57,12 +57,10 @@ public class MainActivity extends AppCompatActivity {
             }
 
             if (!savedInstanceState.getBoolean("flag")) {
-                if(internet)
-                {
+                if (internet) {
                     g1.setSelection(count);
-                    sortMoview(popular);
-                }else
-                {
+                    sortMovies(popular);
+                } else {
                     pd.dismiss();
                     Toast.makeText(this, "please check internet connection!!!", Toast.LENGTH_SHORT).show();
                 }
@@ -70,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
             }
         } else {
             if (internet) {
-                sortMoview(top_rated);
+                sortMovies(top_rated);
                 flag = true;
             } else {
                 pd.dismiss();
@@ -92,23 +90,16 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.top_rated:
                 flag = true;
-                sortMoview(top_rated);
-
+                sortMovies(top_rated);
 
 
                 return true;
             case R.id.popular:
                 flag = false;
-                sortMoview(popular);
+                sortMovies(popular);
 
                 return true;
 
-            case R.id.favorite:
-
-                Intent i = new Intent(this,FavoriteActivity.class);
-                startActivity(i);
-
-                return true;
 
             default:
                 return super.onOptionsItemSelected(item);
@@ -116,8 +107,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void sortMoview(String path)
-    {
+    private void sortMovies(String path) {
 
         g1 = (GridView) findViewById(R.id.g1);
         arrayList = new ArrayList<>();
@@ -153,8 +143,8 @@ public class MainActivity extends AppCompatActivity {
         super.onSaveInstanceState(outState);
 
         outState.putBoolean("flag", flag);
-        int cout = g1.getFirstVisiblePosition();
-        outState.putInt("count", cout);
+        int count = g1.getFirstVisiblePosition();
+        outState.putInt("count", count);
     }
 
     @Override
@@ -162,8 +152,17 @@ public class MainActivity extends AppCompatActivity {
         super.onRestoreInstanceState(savedInstanceState);
         flag = savedInstanceState.getBoolean("flag");
     }
-    private void getData(String path)
-    {
+
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (pd != null && pd.isShowing()) {
+            pd.dismiss();
+        }
+    }
+
+    private void getData(String path) {
         pd.show();
         String BASE_URL_POPULAR = "https://api.themoviedb.org/3/movie/";
         Retrofit retrofit = new Retrofit.Builder().baseUrl(BASE_URL_POPULAR).addConverterFactory(GsonConverterFactory.create()).build();
@@ -171,13 +170,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<MovieDetails> call, Response<MovieDetails> response) {
                 List<Result> record = response.body().getResults();
-                for ( Result ac : record) {
+                for (Result ac : record) {
                     pj = new PojoImage();
                     pj.setUrl(ac.getPosterPath());
                     pj.setId(ac.getId().toString());
                     pj.setOriginal_title(ac.getOriginalTitle());
                     pj.setVote_average(ac.getVoteAverage().toString());
-
                     pj.setOverview(ac.getOverview());
                     pj.setRelease_date(ac.getReleaseDate());
                     arrayList.add(pj);
@@ -191,7 +189,8 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<MovieDetails> call, Throwable t) {
-                Log.e(" on failure",t.getMessage());
+                Log.e(" on failure", t.getMessage());
+                pd.dismiss();
             }
         });
     }

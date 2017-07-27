@@ -2,7 +2,6 @@
         package com.amitabh.moviereviews;
 
         import android.content.Context;
-        import android.util.Log;
         import android.view.LayoutInflater;
         import android.view.View;
         import android.view.ViewGroup;
@@ -53,15 +52,15 @@
 
                     holder=new ViewHolder();
                     holder.iv = (ImageView) v.findViewById(R.id.i1);
-                    holder.tv = (TextView) v.findViewById(R.id.movie_tital);
-                    Log.e("mahessh","ifnull");
+                    holder.tv = (TextView) v.findViewById(R.id.movie_title);
+
 
                     v.setTag(holder);
                 }
                 else {
 
                     holder = (ViewHolder) v.getTag();
-                    Log.e("mahessh","ifnotnull");
+
 
                 }
 

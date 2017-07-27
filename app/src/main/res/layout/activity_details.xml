@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:id="@+id/ll1"
     tools:context="com.amitabh.moviereviews.DetailsActivity">
 
 
@@ -17,27 +16,28 @@
 
         <LinearLayout
 
-            android:layout_marginBottom="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
             android:orientation="vertical"
             android:weightSum="1">
+
             <TextView
+                android:id="@+id/title_detail"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:gravity="center"
                 android:background="#64b389"
-                android:textSize="30sp"
+                android:gravity="center"
                 android:textColor="#ffffff"
-                android:id="@+id/title_detail"/>
+                android:textSize="30sp" />
 
 
             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:baselineAligned="false"
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+                android:orientation="horizontal">
 
                 <LinearLayout
 
@@ -54,63 +54,53 @@
                 </LinearLayout>
 
                 <LinearLayout
-            android:gravity="end"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:orientation="vertical">
 
-            android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:layout_weight="1"
-            android:layout_height="wrap_content">
 
+                    <TextView
+                        android:id="@+id/rating"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="start"
+                        android:hint="@string/rating"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Display2" />
+
+                    <TextView
+                        android:id="@+id/releasedate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="start"
+                        android:hint="@string/date"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Display1" />
+                </LinearLayout>
+
+            </LinearLayout>
 
             <TextView
-
-                android:hint="@string/rating"
+                android:id="@+id/overview"
                 android:layout_width="match_parent"
-                android:layout_gravity="center"
-                android:gravity="center"
                 android:layout_height="wrap_content"
-                android:id="@+id/rating"/>
-
-            <TextView
-                android:hint="@string/date"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_width="match_parent"
-
-                android:layout_height="wrap_content"
-                android:id="@+id/releasedate"/>
-            <ImageButton
-                android:id="@+id/btnFavorite"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:contentDescription="@string/favourite_icon"
-                android:src="@drawable/ic_favorite_black_48dp"
-                style="?borderlessButtonStyle"/>
-
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <TextView
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/overview"/>
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="5dp" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="@color/colorAccent"/>
+                android:background="@color/colorAccent" />
+
             <TextView
-                android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:text="@string/trailers"
-                android:textSize="20sp"/>
-
+                android:textSize="20sp" />
 
 
         </LinearLayout>
@@ -119,9 +109,8 @@
     </ScrollView>
 
     <ListView
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
         android:id="@+id/lv"
-        />
+        android:layout_width="match_parent"
+        android:layout_height="250dp" />
 
 </LinearLayout>

@@ -3,13 +3,17 @@
     <string name="poster_of_movie">poster of movie</string>
     <string name="movie_image">movie image</string>
     <string name="rating">rating</string>
-    <string name="favourite_icon">favourite icon</string>
+
     <string name="date">date</string>
     <string name="trailers">Trailers:</string>
-    <string name="no_review_is_available">no review is available</string>
+
     <string name="top_rated">Top Rated</string>
     <string name="popular">Popular</string>
-    <string name="by">by</string>
-    <string name="reviews">Reviews</string>
+
+
     <string name="video">video</string>
+    <string name="internet_not_available">INTERNET IS NOT AVAILABLE</string>
+    <string name="please_check_internet_connection">please check internet connection</string>
+    <string name="retrieving_data_from_server">Retrieving data from server</string>
+    <string name="loading">Loading</string>
 </resources>
