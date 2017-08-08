@@ -13,9 +13,6 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-/**
- * Created by sadanandk on 7/12/2017.
- */
 
 public class FavouriteAdapter extends BaseAdapter {
     private final Context context;

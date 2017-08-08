@@ -10,9 +10,6 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-/**
- * Created by sadanandk on 6/28/2017.
- */
 
 class VideoAdapter extends BaseAdapter {
     private final Context context;

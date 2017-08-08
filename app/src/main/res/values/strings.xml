@@ -12,5 +12,11 @@
     <string name="popular">Popular</string>
     <string name="by">by</string>
     <string name="reviews">Reviews</string>
+
+
     <string name="video">video</string>
+    <string name="internet_not_available">INTERNET IS NOT AVAILABLE</string>
+    <string name="please_check_internet_connection">please check internet connection</string>
+    <string name="retrieving_data_from_server">Retrieving data from server</string>
+    <string name="loading">Loading</string>
 </resources>

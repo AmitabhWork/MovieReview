@@ -6,9 +6,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
 
-/**
- * Created by sadanandk on 7/12/2017.
- */
 
 public class MyDataBase extends SQLiteOpenHelper {
     // All Static variables

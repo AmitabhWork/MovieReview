@@ -1,8 +1,6 @@
 package com.amitabh.moviereviews;
 
-/**
- * Created by sadanandk on 6/28/2017.
- */
+
 
 class PojoVideo
 {

@@ -48,7 +48,7 @@ public class ReviewActivity extends AppCompatActivity {
         if (actionbar != null) {
             actionbar.setDisplayHomeAsUpEnabled(true);
         }
-        LinearLayout ll2 = (LinearLayout) findViewById(R.id.ll2);
+
 
         lvreview= (ListView) findViewById(R.id.lv_review);
         image=(ImageView)findViewById(R.id.image_not);
